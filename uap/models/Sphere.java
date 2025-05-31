@@ -21,6 +21,11 @@ public class Sphere extends Donat implements MenghitungVolume, MenghitungLuas, M
     }
 
     @Override
+    public int getBiayaKirim() {
+        return (int) Math.ceil(getMassaKg()) * 10000;
+    }
+
+    @Override
     public double getMassa() {
         return getVolume() * THICKNESS * DENSITY;
     }
@@ -28,11 +33,6 @@ public class Sphere extends Donat implements MenghitungVolume, MenghitungLuas, M
     @Override
     public double getMassaKg() {
         return getMassa() / 1000;
-    }
-
-    @Override
-    public int getBiayaKirim() {
-        return (int) Math.ceil(getMassaKg()) * 10000;
     }
 
     @Override
